@@ -23,3 +23,9 @@ gapminder
 gapminder %>%
   filter(year == 2007, country == "United States")
 
+## Practicing using the "arrange" verb
+## Arrange sorts a table based on a variable
+## Sorting with arrange
+
+gapminder %>%
+  arrange(gdpPercap)
