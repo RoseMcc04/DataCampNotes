@@ -5,10 +5,21 @@
 #' @description This document will contain notes for a lesson on tidyverse.
 #' 
 
+# Load dataset and required packages
 library(gapminder)
 library(dplyr)
 library(ggplot2)
+library(magrittr)
 
-# Load gapminder dataset
+# Display gapminder dataset
 gapminder
+
+# Practicing using the "filter" verb
+# Filter subsets observations in datasets
+# First step in data analysis
+
+# Filtering for United States
+
+gapminder %>%
+  filter(year == 2007, country == "United States")
 
