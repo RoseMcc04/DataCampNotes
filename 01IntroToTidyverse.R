@@ -29,3 +29,33 @@ gapminder %>%
 
 gapminder %>%
   arrange(gdpPercap)
+
+# Sort in descending order
+
+gapminder %>%
+  arrange(desc(gdpPercap))
+
+# Filtering then arranging
+
+gapminder %>%
+  filter(year == 2007) %>%
+  arrange(desc(gdpPercap))
+
+# Practicing using the "mutate" verb
+# Mutate changes or adds variables
+# Changing a variable with mutate
+
+gapminder %>%
+  mutate(pop = pop / 1000000)
+
+# Adding a new variable with mutate
+
+gapminder %>%
+  mutate(gdp = gdpPercap * pop)
+
+# Combining Verbs
+
+gapminder %>%
+  mutate(gdp = gdpPercap * pop) %>%
+  filter(year == 2007) %>%
+  arrange(desc(gdp))
